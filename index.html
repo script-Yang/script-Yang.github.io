@@ -75,19 +75,24 @@ ga('send', 'pageview');
 
   <script>
     var images = ["/cat_pic/cat_1.jpg","/cat_pic/cat_2.jpg","/cat_pic/cat_3.jpg","/cat_pic/cat_4.jpg"]
-    
-    // var images = ["./pic/zhaohuxing.jpg",]
     var currentIndex = 0;
     var imageElement = document.getElementById('image');
+    var prevButton = document.getElementById('prevButton');
+    var nextButton = document.getElementById('nextButton');
 
     function nextImage() {
       currentIndex = (currentIndex + 1) % images.length;
       imageElement.src = images[currentIndex];
     }
 
-    imageElement.addEventListener('click', nextImage);
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      imageElement.src = images[currentIndex];
+    }
+
+    nextButton.addEventListener('click', nextImage);
+    prevButton.addEventListener('click', prevImage);
   </script>
-			<!-- <center>click the photo to see more casual boy😎</center> -->
 </body>
 </table>
 
