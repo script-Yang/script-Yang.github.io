@@ -94,10 +94,15 @@ ga('send', 'pageview');
   </style>
 </head>
 <body>
-  <div class="image-container">
+  <!-- <div class="image-container">
     <img src="/cat_pic/cat_1.jpg" alt="图片1" id="image">
-  </div>
+  </div> -->
 
+  <div class="image-container">
+    <button class="button" id="prevButton">&#9664;</button>
+    <img src="/cat_pic/cat_1.jpg" alt="图片1" id="image">
+    <button class="button" id="nextButton">&#9654;</button>
+  </div>
   <script>
     var images = ["/cat_pic/cat_1.jpg","/cat_pic/cat_2.jpg","/cat_pic/cat_3.jpg","/cat_pic/cat_4.jpg"]
     var currentIndex = 0;
