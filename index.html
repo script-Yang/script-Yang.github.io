@@ -70,22 +70,22 @@ ga('send', 'pageview');
 </head>
 <body>
   <div class="image-container">
-    <img src="/cat_pic/cat_pic_1.jpg" alt="图片1" id="image">
+    <img src="/cat_pic/cat_1.jpg" alt="图片1" id="image">
   </div>
 
   <script>
-    // var images = ["./pic/zhp_pic.png","./pic/zhp3.jpg","./pic/zhp1.jpg","./pic/zhp2.jpg","./pic/rickroll.png"]
+    var images = ["/cat_pic/cat_1.jpg","/cat_pic/cat_2.jpg","/cat_pic/cat_3.jpg","/cat_pic/cat_4.jpg"]
     
-    var images = ["./pic/zhaohuxing.jpg",]
+    // var images = ["./pic/zhaohuxing.jpg",]
     var currentIndex = 0;
     var imageElement = document.getElementById('image');
 
-    // function nextImage() {
-    //   currentIndex = (currentIndex + 1) % images.length;
-    //   imageElement.src = images[currentIndex];
-    // }
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      imageElement.src = images[currentIndex];
+    }
 
-    // imageElement.addEventListener('click', nextImage);
+    imageElement.addEventListener('click', nextImage);
   </script>
 			<!-- <center>click the photo to see more casual boy😎</center> -->
 </body>
