@@ -1,2 +1,2 @@
-# IAMJackYan.github.io
-This is JackYan's homepage
+# Hi!
+This is Sicheng Yang's homepage.
