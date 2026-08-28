@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Diary | Sicheng Yang</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="Sicheng Yang's diary on research, learning, and life.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Diary | Sicheng Yang">
+    <meta property="og:url" content="https://script-yang.github.io/thoughts.html">
+    <meta property="og:site_name" content="Sicheng Yang | The Hong Kong University of Science and Technology (Guangzhou)">
+    <meta property="og:description" content="Sicheng Yang's diary on research, learning, and life.">
+    <meta property="og:locale" content="default">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Diary | Sicheng Yang">
+    <meta name="twitter:description" content="Sicheng Yang's diary on research, learning, and life.">
+
+    <link rel="canonical" href="https://script-yang.github.io/thoughts.html">
+
+    <link rel="icon" media="(prefers-color-scheme:dark)" href="./assets/img/favicon-sy.svg" type="image/svg+xml">
+    <link rel="icon" media="(prefers-color-scheme:light)" href="./assets/img/favicon-sy.svg" type="image/svg+xml">
+    <script src="./assets/js/favicon-switcher.js" type="application/javascript"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/pub.css">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/mpii_files/mpi-inf.css">
+  </head>
+  <body>
+    <nav style="width:100%; background:#ddeafc; height:60px; display:flex; align-items:center; justify-content:center; box-shadow:0 2px 4px rgba(0,0,0,0.03); margin-bottom:0;">
+      <div style="max-width:1100px; width:100%; display:flex; align-items:center; justify-content:space-between; padding:0 32px;">
+        <div></div>
+        <div style="display:flex; gap:28px;">
+          <a href="./index.html" style="font-weight:500; color:#222; text-decoration:none; font-size:1.13rem;">Homepage</a>
+          <a href="./publications.html" style="font-weight:500; color:#222; text-decoration:none; font-size:1.13rem;">Publications</a>
+          <a href="./services.html" style="font-weight:500; color:#222; text-decoration:none; font-size:1.13rem;">Services</a>
+          <a href="./roadmap.html" style="font-weight:500; color:#222; text-decoration:none; font-size:1.13rem;">Roadmap</a>
+          <a href="./thoughts.html" style="font-weight:500; color:#222; text-decoration:none; font-size:1.13rem;">Diary</a>
+        </div>
+      </div>
+    </nav>
+    <div style="height:15px;"></div>
+
+    <script src="./assets/js/vanilla-back-to-top.min.js"></script>
+    <script>
+      addBackToTop({
+        backgroundColor: "#fff",
+        innerHTML: "Back to Top",
+        textColor: "#333"
+      });
+    </script>
+    <style>
+      #back-to-top {
+        border: 1px solid #ccc;
+        border-radius: 0;
+        font-size: 15px;
+        width: 100px;
+        text-align: center;
+        line-height: 30px;
+        height: 30px;
+      }
+      .wrapper, .wrapper header, .wrapper section, .wrapper h1, .wrapper .main-content, .wrapper .content, .wrapper > header, .wrapper > section {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+      }
+      header, section, h1 {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+      }
+      .diary-intro {
+        max-width: 680px;
+        color: #5d6570;
+        font-size: 1.05rem;
+        line-height: 1.75;
+      }
+      .diary-list {
+        display: grid;
+        gap: 16px;
+        max-width: 760px;
+        margin-top: 26px;
+      }
+      .diary-entry {
+        border: 1px solid #dce3ec;
+        border-radius: 14px;
+        background: linear-gradient(135deg, #ffffff 0%, #f7faff 100%);
+        box-shadow: 0 8px 24px rgba(42, 67, 101, 0.06);
+        overflow: hidden;
+        transition: box-shadow 180ms ease, transform 180ms ease;
+      }
+      .diary-entry:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 30px rgba(42, 67, 101, 0.1);
+      }
+      .diary-entry summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 20px 24px;
+      }
+      .diary-entry summary::-webkit-details-marker { display: none; }
+      .diary-entry summary::after {
+        content: '+';
+        float: right;
+        color: #7890ad;
+        font-size: 1.4rem;
+        line-height: 1;
+        transition: transform 180ms ease;
+      }
+      .diary-entry[open] summary::after { transform: rotate(45deg); }
+      .diary-date {
+        display: block;
+        margin-bottom: 7px;
+        color: #7890ad;
+        font: 0.82rem/1.2 "Crimson Pro", serif;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .diary-title {
+        margin: 0;
+        color: #26384d;
+        font-size: 1.18rem;
+        font-weight: 600;
+      }
+      .diary-summary {
+        margin: 8px 28px 0 0;
+        color: #687486;
+        line-height: 1.55;
+      }
+      .diary-body {
+        border-top: 1px solid #e5ebf2;
+        padding: 20px 24px 24px;
+        color: #3f4d5d;
+        line-height: 1.8;
+        animation: diary-reveal 220ms ease-out;
+      }
+      @keyframes diary-reveal {
+        from { opacity: 0; transform: translateY(-6px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      @media (max-width: 600px) {
+        .diary-entry summary, .diary-body { padding-left: 18px; padding-right: 18px; }
+      }
+    </style>
+
+    <div class="wrapper" style="margin-top:0;">
+      <header>
+        <img class="profile-avatar" src="./assets/img/profile.jpg" alt="Sicheng Yang">
+        <h1>Sicheng Yang</h1>
+
+        <div class="profile-block">
+          <p class="profile-line school-line">
+            <a href="https://www.hkust-gz.edu.cn/" rel="noopener"><autocolor>HKUST(GZ)</autocolor></a>
+          </p>
+        </div>
+
+        <div class="social-links-text">
+          <a href="mailto:syang671@connect.hkust-gz.edu.cn">
+            <i class="fas fa-envelope"></i>
+            <span>Email</span>
+          </a>
+          <a href="https://scholar.google.com/citations?user=UOAXc7MAAAAJ">
+            <i class="ai ai-google-scholar"></i>
+            <span>Google Scholar</span>
+          </a>
+          <a href="https://github.com/script-Yang">
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+        </div>
+      </header>
+
+      <section>
+        <h2>Diary</h2>
+
+        <p class="diary-intro">A quiet space for occasional notes on research, learning, and life. Each entry begins as a small fragment; open it when you want to read the longer version.</p>
+
+        <div class="diary-list">
+          <details class="diary-entry">
+            <summary>
+              <span class="diary-date">2026年8月28日</span>
+              <h3 class="diary-title">近半年关于医疗 AI 的思考</h3>
+              <p class="diary-summary">我发现的问题，以及我觉得可以做的方向。</p>
+            </summary>
+            <div class="diary-body">
+              <h4>我发现的问题</h4>
+              <ol>
+                <li>
+                  <strong>资本市场的反应和 LLM 有较大差距。</strong>
+                  <p>医疗市场很大，但医疗 AI 的资本投入远低于 General AI。与此同时，医院和学校的资源有限。这可能是最根本的限制。</p>
+                </li>
+                <li>
+                  <strong>医疗数据天然难 Scale。</strong>
+                  <p>数据受到伦理、设备、专家标注和数据分发限制，获取成本高、标准化程度低。</p>
+                </li>
+                <li>
+                  <strong>错误的数据会得到错误的结论。</strong>
+                  <p>医疗数据中存在大量 selection bias、domain bias 和 shortcut。很多论文得到的高性能，可能反映的是数据集偏差，而不本质。</p>
+                </li>
+                <li>
+                  <strong>Medical AI 很少贡献新的技术。</strong>
+                  <p>长期来看，General AI → Medical AI 的技术迁移很多，而 Medical AI → General AI 的原创技术贡献相对较少。</p>
+                </li>
+                <li>
+                  <strong>医生和 CS 对“什么问题适合 AI”缺乏共识。</strong>
+                  <p>临床价值高，不代表适合深度学习。很多问题缺少足够的可观测信息或可靠 ground truth，本身就难以被 AI 学习。</p>
+                </li>
+              </ol>
+
+              <h4>我觉得可以做的</h4>
+              <ol>
+                <li>如何有效收集大量医疗数据，并提炼正确的知识。</li>
+                <li>寻找真正适合 AI 参与的医疗问题。</li>
+              </ol>
+            </div>
+          </details>
+        </div>
+
+        <br>
+      </section>
+
+      <footer>
+        <div style="font: 12px/1.2 Crimson Pro, serif">
+          <p><small></small></p>
+        </div>
+        <br>
+        <br>
+      </footer>
+    </div>
+  </body>
+</html>
